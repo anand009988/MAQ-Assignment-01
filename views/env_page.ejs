@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            text-align: left;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+ <h2>Environment Variable</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% let serialNumber = 1; %> 
+            <% items.forEach(function(item) { %>
+                <tr>
+                    <td><%= serialNumber++ %></td> 
+                    <td><%= item.name %></td> 
+                    <td><%= item.value %></td> 
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+</body>
+</html>
